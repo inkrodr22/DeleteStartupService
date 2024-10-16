@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGODB_URL, {
 .then(() => console.log('Conectado a MongoDB'))
 .catch(err => console.error('No se pudo conectar a MongoDB:', err));
 
-const Startup = require('./models/Startup');
+const Startup = require('./models/startup');
 
 app.delete('/api/startups/delete/:id', async (req, res) => {
     const id = req.params.id;
